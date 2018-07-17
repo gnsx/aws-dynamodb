@@ -21,11 +21,6 @@ type dynamoDB_data struct {
 	Variable_B  int64 `dynamodbav:"Var_B"`
 }
 
-type PlatformData_analytics struct {
-	VariableA  int64
-	VariableB int64
-}
-
 func check(e error) {
 	if e != nil {
 		panic(e)
@@ -114,7 +109,6 @@ func API_Analytics_Run(s_tis int64) {
 		goto data_pending
 	}
 
-	//println(len(data_main))
 	fmt.Printf("%d",len(data_main))
 
 }
